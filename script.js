@@ -23,8 +23,8 @@ function startCounter(element, start, target) {
   let perfect_bodies = document.querySelector(".perfect_bodies");
   let working_hours = document.querySelector(".working_hours");
   let success_stories = document.querySelector(".success_stories");
-  startCounter(happy_customers, 4500, 5000);
-  startCounter(perfect_bodies, 4000, 4560);
+  startCounter(happy_customers, 4200, 5000);
+  startCounter(perfect_bodies, 3900, 4560);
   startCounter(working_hours, 100, 570);
   startCounter(success_stories, 452, 900);
   

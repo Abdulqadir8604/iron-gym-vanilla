@@ -59,269 +59,80 @@ body {
 }
 
 .hero {
-  width: 100%;
+  background-image: url('hero1.jpeg');
+  background-size: cover;
   height: 100vh;
   display: flex;
-  flex-wrap: flex;
-  justify-content: center;
   align-items: center;
-  background: url('hero1.jpeg');
+  justify-content: center;
   background-attachment: fixed;
 }
 
-.stacked-text {
-  line-height: 1.2em;
-  text-align: center;
-  color: white;
-  font-size: 20px;
-  margin-right: 50px;
-  margin-bottom: 50px;
-}
-
-.stacked-text span {
-  display: block;
-}
-
-.p1 {
-  font-size: 20px;
-  padding: 10px;
-  color: #fff;
-  background: #ff0000a2;
-  font-weight: 500;
-  text-align: center;
-  max-width: 80%;
-  margin: 0 auto;
-}
-
-.btn {
-  background-color: #00000000;
-  text-decoration: none;
-  font-size: 14px;
-  padding: 10px 15px;
-  border-style: solid;
-  border-width: 3px;
-  border-color: red;
-  color: #fff;
-  display: inline-block;
-  margin-top: 20px;
-}
-
-@media screen and (min-width: 768px) {
-.body{
-  background: #000;
-}
-
-  .menu-nav ul {
-    gap: 50px;
-  }
-
-  .menu-nav a {
-    font-size: 18px;
-  }
-
-  .stacked-text {
-    font-size: 30px;
-    margin-right: 100px;
-    margin-bottom: 250px;
-  }
-
-  .p1 {
-    font-size: 30px;
-    padding: 20px;
-    max-width: 500px;
-  }
-
-  .p2{
-    width: 100%;
-  }
-
-  .btn {
-    font-size: 16px;
-    padding: 15px 20px;
-    margin-top: 30px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-
-  .body{
-    background: #000;
-  }
-
-  /* CSS rules for screens with a minimum width of 1024px */
-  .menu-nav ul {
-    justify-content: space-between;
-  }
-
-  .menu-nav li {
-    margin-top: 0;
-  }
-
-  .logo_text {
-    font-size: 24px;
-  }
-
-  .hero {
-    background-size: cover;
-    background-position: center;
-  }
-
-  .stacked-text {
-    margin-right: 0;
-    margin-bottom: 50px;
-    font-size: 28px;
-  }
-
-  .p1 {
-    font-size: 36px;
-  }
-
-  .btn {
-    font-size: 18px;
-    padding: 20px;
-  }
-}
-
-
-.btn:hover {
-  background-color: red;
-  transition: all 0.3s ease-in-out;
-}
-
-.info {
+.hero::before {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  background-color: #ff0000;
-  margin-top: 200px;
+  height: 100%;
 }
 
-
-/* Small screens */
-@media only screen and (max-width: 600px) {
-  .logo-nav {
-    width: 40%;
-    margin-top: 20px;
-  }
-
-  nav {
-    width: 70%;
-  }
-
-  .p1 {
-    font-size: 30px;
-    padding: 20px;
-  }
-
-  .btn {
-    font-size: 12px;
-    padding: 10px;
-  }
-}
-
-/* Medium screens */
-@media only screen and (min-width: 601px) and (max-width: 960px) {
-  .logo-nav {
-    width: 30%;
-    margin-top: 30px;
-  }
-
-  nav {
-    width: 60%;
-  }
-
-  .p1 {
-    font-size: 40px;
-    padding: 30px;
-  }
-
-  .btn {
-    font-size: 14px;
-    padding: 12px;
-  }
-}
-
-/* Large screens */
-@media only screen and (min-width: 961px) {
-  .logo-nav {
-    width: 20%;
-    margin-top: 50px;
-  }
-
-  nav {
-    width: 50%;
-  }
-
-  .p1 {
-    font-size: 50px;
-    padding: 50px;
-  }
-
-  .btn {
-    font-size: 15px;
-    padding: 15px;
-  }
-}
-
-.p2 {
-  margin-top: 550px;
-  width: 50vw;
-  background: red;
-  color: white;
-}
-
-.contact-info {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-height: none;
-  overflow-y: visible;
-}
-
-.contact-item {
-  flex-basis: 100%;
-
+.hero-text {
   text-align: center;
-  margin: 20px 0;
-  max-height: 200px;
-  overflow-y: auto;
+  color: white;
+  z-index: 1;
 }
 
-.contact-item i {
-  font-size: 24px;
-  margin-bottom: 10px;
-  display: block;
+.hero-text h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
 }
 
-.contact-item h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
+.hero-text p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 3rem;
 }
 
-.contact-item p {
-  font-size: 14px;
-  margin-bottom: 0;
+.cta {
+  background-color: #ff0000;
+  color: #fff;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
-@media only screen and (max-width: 768px) {
-  .contact-item {
-    flex-basis: calc(100% / 3);
-    margin: 20px;
+.cta:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2rem;
   }
-}
 
-@media only screen and (max-width: 480px) {
-  .contact-item {
-    flex-basis: 100%;
-    margin: 20px 0;
+  .hero-text p {
+    font-size: 1.2rem;
+  }
+
+  .hero-text button {
+    font-size: 1rem;
+    padding: 0.8rem 2.5rem;
   }
 }
 
 .intro {
-  /* background: url("bg2.jpg");
-    background-attachment: fixed; */
   background-color: #00000000;
   width: 100%;
   display: flex;
   justify-content: start;
+  height: 100%;
 }
 
 .c1 {
@@ -332,11 +143,12 @@ body {
   padding: 50px;
   color: white;
   background: #000000a2;
+  height: 100%;
 }
 
 .c2>p {
-  margin-top: 50px;
-  font-size: 18px;
+  margin-top: 20px;
+  font-size: 17px;
   font-weight: 100;
 }
 
@@ -359,6 +171,10 @@ body {
     padding: 30px;
   }
 
+  .c2 > h1 {
+    font-size: 1.5rem;
+  }
+
   .c2 > p {
     margin-top: 30px;
     font-size: 16px;
@@ -375,6 +191,7 @@ body {
 }
 
 .services-text {
+  margin-top: 30px;
   color: red;
 }
 
@@ -691,7 +508,11 @@ body {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  background: #000;
+  background: url('https://images.pexels.com/photos/4164520/pexels-photo-4164520.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
   color: #fff;
   padding: 40px;
 }
