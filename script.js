@@ -5,17 +5,26 @@ container.addEventListener('scroll', () => {
   stickyColumn.style.top = `${container.scrollTop}px`;       
 });
 
-function startCounter(element, target) {
-    let count = 0;
+function startCounter(element, start, target) {
+    let count = start;
     let animation = setInterval(() => {
       count++;
-      element.innerText = count;
+      if (count > 999)
+        element.innerText = count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      else
+        element.innerText = count;
       if (count == target) {
         clearInterval(animation);
       }
     }, 30);
   }
   
-  let counterElement = document.querySelector(".count");
-  startCounter(counterElement, 100);
+  let happy_customers = document.querySelector(".happy_customers");
+  let perfect_bodies = document.querySelector(".perfect_bodies");
+  let working_hours = document.querySelector(".working_hours");
+  let success_stories = document.querySelector(".success_stories");
+  startCounter(happy_customers, 4500, 5000);
+  startCounter(perfect_bodies, 4000, 4560);
+  startCounter(working_hours, 100, 570);
+  startCounter(success_stories, 452, 900);
   

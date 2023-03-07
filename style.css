@@ -685,3 +685,41 @@ body {
     }
   }
 }
+
+.counter{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background: #000;
+  color: #fff;
+  padding: 40px;
+}
+
+.counter>div{
+  width: 25%;
+  padding: 20px;
+  text-align: center;
+}
+
+.counter>div>span{
+  font-size: 30px;
+  font-weight: bold;
+  color: #ff0000;
+}
+
+.counter>div>p{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px){
+  .counter{
+    flex-direction: column;
+  }
+  .counter>div{
+    width: 100%;
+  }
+}
+
+
