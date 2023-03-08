@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fff;
+    background: url('images/hero1.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.hero {
+    background: rgba(0, 0, 0, 0.5);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 16px 32px;
+    border-radius: 8px;
+    border-color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    width: auto;
+}
+
+.cta:hover {
+    background-color: #fff;
+    color: #000;
+    border-color: #000;
+}
+
+.packages {
+    background: url('videos/pricing_gif.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.package {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    background-color: #000000a2;
+}
+
+.package>h4 {
+    color: #ff0000;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.package>h2 {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.package>p {
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.plans {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+    justify-content: center;
+
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.pricing-card {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.299);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    padding: 38px;
+    filter: drop-shadow(0 30px 10px rgba(0, 0, 0, 0.125));
+    padding: 20px;
+    text-align: center;
+}
+
+.gold {
+    background-color: rgba(255, 145, 0, 0.208);
+    color: #fff;
+}
+
+.silver {
+    background-color: rgba(129, 129, 129, 0.208);
+    color: #fff;
+}
+
+.bronze {
+    background-color: rgba(255, 85, 0, 0.208);
+    color: #fff;
+}
+
+.sapphire {
+    background-color: rgba(0, 0, 255, 0.208);
+    color: #fff;
+}
+
+.emerald {
+    background-color: rgba(0, 255, 0, 0.208);
+    color: #fff;
+}
+
+.amethyst {
+    background-color: rgba(255, 0, 255, 0.208);
+    color: #fff;
+}
+
+.amber {
+    background-color: rgba(255, 255, 0, 0.208);
+    color: #fff;
+}
+
+.ruby {
+    background-color: rgba(255, 0, 0, 0.208);
+    color: #fff;
+}
+
+.quartz {
+    background-color: rgba(255, 255, 255, 0.208);
+    color: #fff;
+}
+
+.pricing-card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ff0000;
+}
+
+.pricing-card .price {
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+.pricing-card .freq {
+    font-size: 16px;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pricing-card ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #c1c1c1;
+}
+
+.pricing-card ul li:last-child {
+    border-bottom: none;
+}
+
+.pricing-card ul li span {
+    float: right;
+}
+
+.pricing-card .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ff0000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.pricing-card .btn:hover {
+    background: #fff;
+    color: #000;
+    pointer-events: painted;
+    transition: all 0.3s ease-in-out;
+}
+
+.package .enroll {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.package .enroll:hover {
+    background: #000;
+    color: #fff;
+    pointer-events: painted;
+    transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+    .pricing-card {
+        width: 100%;
+        padding: 20px;
+        margin: 30px;
+    }
+
+    .pricing-card h2 {
+        font-size: 1rem;
+    }
+
+    .pricing-card .price {
+        font-size: 1.5rem;
+    }
+
+    .pricing-card ul li {
+        font-size: 0.8rem;
+    }
+
+    .pricing-card ul li span {
+        font-size: 0.8rem;
+    }
+
+    .pricing-card .btn {
+        font-size: 0.8rem;
+    }
+
+    .plans {
+        flex-direction: column;
+    }
+}

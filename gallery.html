@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css">
+    <title>Gallery</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+      }
+      
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        grid-gap: 10px;
+        margin: 20px;
+      }
+      
+      .gallery img {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+        cursor: pointer;
+        transition: transform 0.2s ease-in-out;
+      }
+      
+      .gallery img:hover {
+        transform: scale(1.1);
+      }
+      
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.9);
+      }
+      
+      .modal-content {
+        margin: 10% auto;
+        width: 80%;
+      }
+      
+      .modal img {
+        width: 100%;
+        height: auto;
+      }
+      
+      .close {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 10rem;
+        font-weight: bold;
+        color: #fff;
+        cursor: pointer;
+      }
+      
+      @media (max-width: 480px) {
+        .gallery {
+          grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+          grid-gap: 5px;
+          margin: 10px;
+        }
+        
+        .modal-content {
+          margin: 20% auto;
+          width: 90%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gallery">
+      <img src="gym_pics/1.jpg" alt="image 1" />
+      <img src="gym_pics/2.jpg" alt="image 2" />
+      <img src="gym_pics/3.jpg" alt="image 3" />
+      <img src="gym_pics/4.jpg" alt="image 4" />
+      <img src="gym_pics/5.jpg" alt="image 5" />
+      <img src="gym_pics/6.jpg" alt="image 6" />
+      <img src="gym_pics/7.jpg" alt="image 7" />
+      <img src="gym_pics/8.jpg" alt="image 8" />
+      <img src="gym_pics/9.jpg" alt="image 9" />
+      <img src="gym_pics/10.jpg" alt="image 10" />
+      <img src="gym_pics/11.jpg" alt="image 11" />
+      <img src="gym_pics/14.jpg" alt="image 14" />
+      <img src="gym_pics/15.jpg" alt="image 15" />
+      <img src="gym_pics/16.jpg" alt="image 16" />
+      <img src="gym_pics/18.jpg" alt="image 18" />
+      <img src="gym_pics/21.jpg" alt="image 21" />
+      <img src="gym_pics/24.jpg" alt="image 24" />
+    </div>
+
+    <a href="index.html" class="cta">Back to Main Page</a>
+    
+    <div class="modal">
+      <span class="close">&times;</span>
+      <div class="modal-content">
+        <img id="modal-image" />
+      </div>
+    </div>
+    
+    <script>
+      const gallery = document.querySelector('.gallery');
+      const modal = document.querySelector('.modal');
+      const modalImg = document.querySelector('#modal-image');
+      const images = gallery.querySelectorAll('img');
+      const close = document.querySelector('.close');
+      
+      images.forEach(image => {
+        image.addEventListener('click', () => {
+          modal.style.display = 'block';
+          modalImg.src = image.src;
+        });
+      });
+      
+      close.addEventListener('click', () => {
+        modal.style.display = 'none';
+      });
+    </script>
+  </body
