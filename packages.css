@@ -55,6 +55,31 @@ body {
     border-color: #000;
 }
 
+@media screen and (max-width: 768px) {
+    .hero {
+        height: 100vh;
+    }
+
+    .hero h1 {
+        font-size: 20px;
+    }
+
+    .hero p {
+        font-size: 10px;
+    }
+
+    .hero .cta {
+        font-size: 8px;
+        padding: 6px 12px;
+    }
+
+    .hero .cta:hover {
+        background-color: #fff;
+        color: #000;
+        border-color: #000;
+    }
+}
+
 .packages {
     background: url('videos/pricing_gif.gif');
     background-size: cover;
@@ -234,33 +259,73 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+    .plans {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .package {
+        padding: 20px 0;
+    }
+
+    .package>h4 {
+        font-size: 14px;
+    }
+
+    .package>h2 {
+        font-size: 24px;
+    }
+
+    .package>p {
+        font-size: 14px;
+    }
+
     .pricing-card {
-        width: 100%;
         padding: 20px;
-        margin: 30px;
     }
 
     .pricing-card h2 {
-        font-size: 1rem;
+        font-size: 20px;
     }
 
     .pricing-card .price {
-        font-size: 1.5rem;
+        font-size: 24px;
     }
 
+    .pricing-card .freq {
+        font-size: 14px;
+    }
+
+
+
     .pricing-card ul li {
-        font-size: 0.8rem;
+        padding: 8px 0;
     }
 
     .pricing-card ul li span {
-        font-size: 0.8rem;
+        float: right;
     }
 
     .pricing-card .btn {
-        font-size: 0.8rem;
+        padding: 8px 16px;
+        font-size: 14px;
     }
 
-    .plans {
-        flex-direction: column;
+    .package .enroll {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .package .enroll:hover {
+        background: #000;
+        color: #fff;
+        pointer-events: painted;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .pricing-card .btn:hover {
+        background: #fff;
+        color: #000;
+        pointer-events: painted;
+        transition: all 0.3s ease-in-out;
     }
 }
