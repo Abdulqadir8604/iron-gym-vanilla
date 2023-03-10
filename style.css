@@ -96,7 +96,7 @@ a {
 
 
 .logo_text {
-  color: red;
+  color: #ff0000;
 }
 
 .hero {
@@ -181,6 +181,10 @@ a {
 @media screen and (max-width: 768px) {
 
   .hero {
+    background: url('videos/hero_gif_v.gif');
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
     flex-direction: column;
   }
 
@@ -224,7 +228,8 @@ a {
 
 .c2 {
   padding: 50px;
-  color: white;
+  width: 50%;
+  color: #fff;
   background: #000000a2;
   background-blend-mode: multiply;
 }
@@ -239,7 +244,7 @@ a {
 @media only screen and (max-width: 767px) {
 
   .intro {
-    background: #000;
+    background: #000000a2;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -247,7 +252,7 @@ a {
 
   .c1 .video {
     width: 100%;
-    height: 300px;
+    height: 100%;
   }
 
   .c2 {
@@ -256,7 +261,7 @@ a {
   }
 
   .c2>h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-align: center;
   }
 
@@ -269,7 +274,7 @@ a {
 
 @media screen and (max-width: 912px) {
   .intro {
-    background: #000;
+    background: #000000a2;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -277,7 +282,7 @@ a {
 
   .c1 .video {
     width: 100%;
-    height: 300px;
+    height: 100%;
   }
 
   .c2 {
@@ -286,7 +291,7 @@ a {
   }
 
   .c2>h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-align: center;
   }
 
@@ -452,7 +457,7 @@ a {
 }
 
 .q1 h4 {
-  margin-top: 300px;
+  margin-top: 10rem;
   color: #ff0000;
   font-size: 20px;
 }
@@ -537,7 +542,6 @@ a {
 @media only screen and (max-width: 767px) {
   .programs {
     flex-direction: column;
-    background: #000;
   }
 
   .q1,
@@ -548,7 +552,7 @@ a {
 
   .q1 {
     align-items: center;
-    background: #000;
+    background: #000000a2;
     position: relative;
   }
 
@@ -652,6 +656,11 @@ a {
 @media screen and (max-width: 768px) {
   .counter {
     flex-direction: column;
+    background: url('videos/count_gif_v.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
   }
 
   .counter>div {
@@ -717,7 +726,7 @@ a {
   align-items: center;
   justify-content: center;
   text-align: center;
-
+  width: 350px;
 }
 
 .trainer:hover {
@@ -824,12 +833,12 @@ a {
   }
 
   .trainer {
-    margin-bottom: 20px;
     margin: 20px;
   }
 
   .trainer .banner-image {
-    width: 100%;
+    width: 88%;
+    height: 100%;
   }
 
   .trainer h1 {
@@ -1176,6 +1185,13 @@ a {
 
   .plans {
     flex-direction: column;
+  }
+
+  .packages {
+    background: url('videos/pricing_gif_v.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 }
 
