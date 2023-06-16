@@ -11,7 +11,7 @@ function submit(event) {
   const message = document.getElementById('message').value;
 
   // Make a POST request to the server to send the form data
-  fetch('/send-email', {
+  fetch('/iron-gym-vanilla/send-email', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded'
