@@ -1,33 +1,8 @@
-const nodemailer = require('nodemailer');
-
-const bookButton = document.querySelector('.submit');
-
-async function sendEmail(receiverEmail, subject, message) {
-  try {
-    let transporter = nodemailer.createTransport({
-      service: 'hotmail',
-      auth: {
-        user: 'abdulqadirmb@outlook.com',
-        pass: 'Smarty.@q8604'
-      }
-    });
-
-    let mailOptions = {
-      from: 'abdulqadirmb@outlook.com',
-      to: receiverEmail,
-      subject: subject,
-      text: message
-    };
-
-    let info = await transporter.sendMail(mailOptions);
-    console.log('Email sent:', info.response);
-  } catch (error) {
-    console.log('Error sending email:', error);
-  }
-}
+const bookButton = document.querySelector(".submit");
 
 function submit(event) {
   event.preventDefault(); // Prevent form submission and page refresh
+
   // Access the form fields
   const name = document.getElementById('name').value;
   const email = document.getElementById('email').value;
@@ -35,20 +10,27 @@ function submit(event) {
   const time = document.getElementById('time').value;
   const message = document.getElementById('message').value;
 
-  // Do something with the form data
-  // For example, you can log the values to the console
-  console.log('Name:', name);
-  console.log('Email:', email);
-  console.log('Date:', date);
-  console.log('Time:', time);
-  console.log('Message:', message);
-
-  const subject = `Appointment from ${name}`;
-  const emailMessage = `This is an appointment booking message from ${name}.\n\nDate: ${date}\nTime: ${time}\n\nMessage: ${message}\n\nCEO, AQ Smart Solutions Ltd.`;
-
-  sendEmail(email, subject, emailMessage)
-      .then(() => console.log('Email sent!'))
-      .catch((error) => console.log('Error sending email:', error));
+  // Make a POST request to the server to send the form data
+  fetch('/send-email', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    },
+    body: new URLSearchParams({
+      name,
+      email,
+      date,
+      time,
+      message
+    }).toString()
+  })
+      .then((response) => {
+        if (response.redirected) {
+          // Redirect to the homepage if form submission is successful
+          window.location.href = "https://abdulqadir8604.github.io/iron-gym-vanilla/#appointment";
+        }
+      })
+      .catch((error) => console.log('Error submitting form:', error));
 }
 
 bookButton.addEventListener('click', submit);
