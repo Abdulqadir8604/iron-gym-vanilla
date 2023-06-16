@@ -14,7 +14,7 @@ app.use((req, res, next) => {
 });
 
 // Route to handle form submission and send email
-app.post('/send-email', async (req, res) => {
+app.post('https://irongymemailserver.abdulqadir8604.repl.co/send-email', async (req, res) => {
     const { name, email, date, time, message } = req.body;
 
     // Create a transporter
