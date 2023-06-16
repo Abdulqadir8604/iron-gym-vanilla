@@ -1,0 +1,23 @@
+# Dependency directories
+/node_modules
+
+# Build output
+/dist
+/build
+
+# Environment variables
+.env
+
+# Editor and IDE files
+/.idea
+/.vscode
+
+# Logs
+/logs
+/*.log
+
+# OS generated files
+.DS_Store
+
+# Compiled binary addons
+/build/Release
