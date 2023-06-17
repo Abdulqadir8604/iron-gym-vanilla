@@ -28,3 +28,15 @@ function startCounter(element, start, target) {
   startCounter(perfect_bodies, 3900, 4560);
   startCounter(working_hours, 100, 570);
   startCounter(success_stories, 452, 900);
+
+
+  const gallery = document.querySelector(".gallery");
+  let gallery_item;
+
+  for (let i = 2; i <= 17; i++) {
+    //create a gallery item div for each image element with the img src set to the current image
+    gallery_item = document.createElement("div");
+    gallery_item.classList.add("gallery-item");
+    gallery_item.innerHTML = `<img src="gym_pics/${i}.jpg" alt="gym_pics/${i}.jpg" />`;
+    gallery.appendChild(gallery_item);
+  }
