@@ -178,7 +178,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: start;
-  height: 100%;
+  height: max-content;
 }
 
 .c1 {
@@ -188,14 +188,14 @@ body {
 
 .c2 {
   padding: 50px;
-  width: 50%;
+  width: 100vw;
   color: #fff;
   background: #000000a2;
   background-blend-mode: multiply;
 }
 
 .c2>p {
-  margin-top: 20px;
+  margin-top: 10px;
   font-size: 17px;
   font-weight: 100;
   text-align: center;
@@ -222,12 +222,13 @@ body {
 
   .c2>h1 {
     font-size: 1.8rem;
-    text-align: center;
+    text-align: start;
   }
 
   .c2>p {
     margin-top: 30px;
     font-size: 14px;
+    text-align: start;
   }
 
 }
@@ -317,6 +318,7 @@ body {
   text-align: center;
   border-radius: 30px;
   padding: 10px;
+  transition: 0.5s;
 }
 
 .icon-box {
@@ -328,25 +330,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.5s;
 }
 
 .icon:hover {
   box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
-  transition: all 0.2s ease-in-out;
+  transform: translateY(-10px);
 }
 
-.icon:hover>.icon-box {
-  animation: spin 2s ease-in-out infinite;
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
+.icon:hover .icon-box {
+  transform: scale(1.2);
 }
 
 .icon-box i {
@@ -685,8 +678,6 @@ body {
 
 .trainer:hover {
   transform: scale(1.1);
-  transition: all 0.3s ease-in-out;
-  animation: pulse 2s linear infinite;
 }
 
 @keyframes pulse {
@@ -1279,10 +1270,30 @@ body {
   text-align: center;
 }
 
-.footer img {
+.footer__logo {
+  position: relative;
+}
+
+.footer__logo > img {
+  position: relative;
   width: 100px;
   margin-bottom: 10px;
+  animation: spin 5s linear infinite;
 }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
 
 .footer p {
   margin: 0;
